@@ -9,7 +9,9 @@ app.use(cors());
 
 
 app.use('/auth', require("./routes/jwtAuth"));
-app.listen(5000,()=>{
-console.log("server is on")
+
+app.use('/dashboard', require("./routes/dashboard"));
+app.listen(5000, () => {
+    console.log("server is on")
 
 });
